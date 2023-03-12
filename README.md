@@ -33,11 +33,17 @@ bookm.art shows how the Nestable and MultiAsset RMRK legos are used to create a 
 
 ## Use Case
 
-The use case that bookm.art implements is a film/collection (exhibiton, catalog, etc...). The film will be a collection of NFTs, each representing characters, extras,...Each Film/Collection will be represented by an image, metadata, video and/or audio files. And Each Character/Extra will be represented by an image and metadata.
+The use case that bookm.art implements is a film/collection (exhibiton, catalog, etc...).
+
+The film will be a collection of NFTs, each representing characters, extras,...
+
+Each Film/Collection will be represented by an image, metadata, video and/or audio files.
+
+And Each Character/Extra will be represented by an image and metadata.
 
 The Film/Collection NFT will live in its own collection, while the Characters/Extras will live in their own collection.
 
-![](frontend-collection-details.jpg)
+![](01-frontend-collection-details.jpg)
 
 ## Smart Contracts
 
