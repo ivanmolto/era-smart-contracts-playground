@@ -292,9 +292,9 @@ videoURI: ipfs://QmUPAsc2p3tgbt3ScnnB9MJ799zcCnbBYwsarYvQKxNruM
 Name: Caminandes Llamigos
 Symbol: CAMINANDES
 Max supply: 10000
-Contract address:
-Verification code:
-zkSync Era Explorer: [link]()
+Contract address: 0xba832BfC947C2fD418359b9d42Be74C6AFcD1848
+Verification code: 4414
+zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0xba832BfC947C2fD418359b9d42Be74C6AFcD1848)
 (In progress)
 
 ### Coffee Run
@@ -302,9 +302,9 @@ zkSync Era Explorer: [link]()
 Name: Coffee Run
 Symbol: COFFEE
 Max supply: 10000
-Contract address:
-Verification code:
-zkSync Era Explorer: [link]()
+Contract address: 0x8b23aA87448b848462d1Ed290a30515Fd106c812
+Verification code: 4412
+zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x8b23aA87448b848462d1Ed290a30515Fd106c812)
 (In progress)
 
 ## User Journey
