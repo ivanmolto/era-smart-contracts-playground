@@ -233,4 +233,74 @@ You can see the code for the Film and Character smart contracts in the contracts
 We will creat a `deploy.ts` file ini the `deploy` directory to write the deployment script.
 You can find the deployment script [here](https://github.com/ivanmolto/era-smart-contracts-playground/blob/zksync/deploy/deploy.ts)
 
+These are the smart contracts deployed for the sample collections in https://www.bookm.art:
+
+### Pet Projects
+
+Name: Pet Projects
+Symbol: PET
+Max supply: 10000
+Contract address: 0x707763458D169673db7Ac5a2a289c1189EdE0413
+Verification code: 4421
+zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x707763458D169673db7Ac5a2a289c1189EdE0413)
+
+metadataURI: ipfs://QmQWoLb2WfYsWUcXfyQcodVEoVbaByWH4WmB5K8CdREVbh
+tokenURI: ipfs://QmW8xbC6aUTHWgSxYykq7jizhzYCbxfsyodkeBa4BqY6Si
+spoilerURI: ipfs://QmdXhkjUbbF5KWUv8Kwng6542f4pEamKjmBMi3DVb24e9J
+
+### Charge
+
+Name: Charge
+Symbol: CHARGE
+Max supply: 10000
+Contract address: 0xc2E38E19e5Da9b239AB0A317A0214aEdA702B235
+Verification code: 4407
+zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0xc2E38E19e5Da9b239AB0A317A0214aEdA702B235)
+
+metadataURI: ipfs://QmZ1xvtu9VzZxQzkGZx88Mj1pCNQAzAUdpyB6d7PkmBhc7
+tokenURI: ipfs://QmTcNwoisU3rzgubRrLrWKZyGB8LLg8qCKyEj41xWwPL7y
+teaserURI: ipfs://QmUoGSdHj8aZmWPHfpUqC8yRMuktTCfAxzWiN9hsHroG66
+
+### Sprite Fright
+
+Name: Sprite Fright
+Symbol: SPRITE
+Max supply: 10000
+Contract address: 0x8380707688b09F16606ac606E9C3E14cA5B9B5A4
+Verification code: 4408
+zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x8380707688b09F16606ac606E9C3E14cA5B9B5A4)
+
+### Spring
+
+Name: Spring
+Symbol: SPRING
+Max supply: 10000
+Contract address: 0x73713d7aa41B8E8bA3fd2834D14D5e0eAFA31242
+Verification code: 4413
+zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x73713d7aa41B8E8bA3fd2834D14D5e0eAFA31242)
+
+metadataURI: ipfs://QmQkSHewktWop2EuyQ8tsQoNw7JZBudyCFaMswno4MXrAi
+tokenURI: ipfs://QmRdwxGqdSjKE4zHFy3upXpqZxCnSqogUfzMAjDzeQxGCi
+videoURI: ipfs://QmUPAsc2p3tgbt3ScnnB9MJ799zcCnbBYwsarYvQKxNruM
+
+### Caminandes Llamigos
+
+Name: Caminandes Llamigos
+Symbol: CAMINANDES
+Max supply: 10000
+Contract address:
+Verification code:
+zkSync Era Explorer: [link]()
+(In progress)
+
+### Coffee Run
+
+Name: Coffee Run
+Symbol: COFFEE
+Max supply: 10000
+Contract address:
+Verification code:
+zkSync Era Explorer: [link]()
+(In progress)
+
 ## User Journey
