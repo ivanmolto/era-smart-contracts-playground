@@ -238,7 +238,7 @@ These are the smart contracts deployed for the sample collections in https://www
 ### Pet Projects
 
 <details>
-    <summary>And click to see full details of the Contract address: 0x707763458D169673db7Ac5a2a289c1189EdE0413</summary>
+    <summary>Click to see full details of the Contract address: 0x707763458D169673db7Ac5a2a289c1189EdE0413</summary>
 
 Name: Pet Projects
 
@@ -264,6 +264,9 @@ spoilerURI: ipfs://QmdXhkjUbbF5KWUv8Kwng6542f4pEamKjmBMi3DVb24e9J
 
 ### Charge
 
+<details>
+    <summary>Click to see full details of the Contract address: 0xc2E38E19e5Da9b239AB0A317A0214aEdA702B235</summary>
+
 Name: Charge
 
 Symbol: CHARGE
@@ -281,6 +284,10 @@ metadataURI: ipfs://QmZ1xvtu9VzZxQzkGZx88Mj1pCNQAzAUdpyB6d7PkmBhc7
 tokenURI: ipfs://QmTcNwoisU3rzgubRrLrWKZyGB8LLg8qCKyEj41xWwPL7y
 
 teaserURI: ipfs://QmUoGSdHj8aZmWPHfpUqC8yRMuktTCfAxzWiN9hsHroG66
+
+</details>
+
+---
 
 ### Sprite Fright
 
@@ -302,6 +309,8 @@ tokenURI: ipfs://QmcRTF6zg66N5pceWhfib5hoEhXq6DYTAfdyMnGBtdo8Ct
 
 lineupURI: ipfs://QmepXTjE1SUtWnFQxhPEb5nwrkcjXqSMCUs4o28yf4DB8V
 
+---
+
 ### Spring
 
 Name: Spring
@@ -322,6 +331,8 @@ tokenURI: ipfs://QmRdwxGqdSjKE4zHFy3upXpqZxCnSqogUfzMAjDzeQxGCi
 
 videoURI: ipfs://QmUPAsc2p3tgbt3ScnnB9MJ799zcCnbBYwsarYvQKxNruM
 
+---
+
 ### Caminandes Llamigos
 
 Name: Caminandes Llamigos
@@ -338,6 +349,8 @@ zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0xba832BfC
 
 (In progress)
 
+---
+
 ### Coffee Run
 
 Name: Coffee Run
@@ -353,5 +366,7 @@ Verification code: 4412
 zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x8b23aA87448b848462d1Ed290a30515Fd106c812)
 
 (In progress)
+
+---
 
 ## User Journey
