@@ -237,6 +237,9 @@ These are the smart contracts deployed for the sample collections in https://www
 
 ### Pet Projects
 
+<details>
+    <summary>And click to see full details of the Contract address: 0x707763458D169673db7Ac5a2a289c1189EdE0413</summary>
+
 Name: Pet Projects
 
 Symbol: PET
@@ -254,6 +257,10 @@ metadataURI: ipfs://QmQWoLb2WfYsWUcXfyQcodVEoVbaByWH4WmB5K8CdREVbh
 tokenURI: ipfs://QmW8xbC6aUTHWgSxYykq7jizhzYCbxfsyodkeBa4BqY6Si
 
 spoilerURI: ipfs://QmdXhkjUbbF5KWUv8Kwng6542f4pEamKjmBMi3DVb24e9J
+
+</details>
+
+---
 
 ### Charge
 
