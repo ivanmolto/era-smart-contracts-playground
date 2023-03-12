@@ -270,6 +270,10 @@ Contract address: 0x8380707688b09F16606ac606E9C3E14cA5B9B5A4
 Verification code: 4408
 zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x8380707688b09F16606ac606E9C3E14cA5B9B5A4)
 
+metadataURI: ipfs://QmRuHCGEZWCXAu5BKEj7VaFArzdxzMTAs3NKRJr8n11jBA
+tokenURI: ipfs://QmcRTF6zg66N5pceWhfib5hoEhXq6DYTAfdyMnGBtdo8Ct
+lineupURI: ipfs://QmepXTjE1SUtWnFQxhPEb5nwrkcjXqSMCUs4o28yf4DB8V
+
 ### Spring
 
 Name: Spring
