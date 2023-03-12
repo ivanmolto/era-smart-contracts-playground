@@ -24,8 +24,9 @@ Credit and kudos to RMRK Team.
 2. Check contract size: `yarn hardhat size-contracts`
 3. Run prettier: `yarn prettier`
 4. Copy .env.example into .env and set the variables
-5. Use `contracts/`, `tests/` and `scripts/` to build your code.
-6. Deploy on testnet: `yarn hardhat deploy-zksync --network zkSyncTestnet`
+5. Use `contracts/`, `tests/` and `scripts/` to build the code.
+6. Use `yarn hardhat compile` to compile the code.
+7. Deploy on testnet: `yarn hardhat deploy-zksync --network zkSyncTestnet`
 
 ## Using Nestable and MultiAsset RMRK legos in bookm.art
 
@@ -224,3 +225,12 @@ Here you will find the smart contracts for Film and Character.
         }
 
 </details>
+
+You can see the code for the Film and Character smart contracts in the contracts folder and [here](https://github.com/ivanmolto/era-smart-contracts-playground/blob/zksync/contracts/Film.sol) and [here](https://github.com/ivanmolto/era-smart-contracts-playground/blob/zksync/contracts/Character.sol)
+
+## Deployment of smart contracts
+
+We will creat a `deploy.ts` file ini the `deploy` directory to write the deployment script.
+You can find the deployment script [here](https://github.com/ivanmolto/era-smart-contracts-playground/blob/zksync/deploy/deploy.ts)
+
+## User Journey
