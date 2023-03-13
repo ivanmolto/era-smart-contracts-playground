@@ -8,7 +8,6 @@ import * as ethers from 'ethers';
 
 export default async function (hre: HardhatRuntimeEnvironment) {
   console.log('Deploying smart film contract');
-
   const wallet = new Wallet(process.env.PRIVATE_KEY || '');
 
   // Create deployer object and load the artifact of the contract you want to deploy.
@@ -29,10 +28,22 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   console.log(`The deployment is estimated to cost ${parsedFee} ETH`);
 
   const film = <Film>await deployer.deploy(filmArtifact, filmArgs);
-
   await film.deployed();
-
   console.log(`Sample contracts deployed to ${film.address}.`);
+
+  // Deployment of Character smart contract
+  console.log('Deploying Character smart contract');
+  const characterArtifact = await deployer.loadArtifact('Character');
+  const characterArgs = ['Cat', 'CAT'];
+  // const characterArgs = ['Dog', 'DOG'];
+  // const characterArgs = ['Pitch', 'PITCH'];
+  const characterDeploymentFee = await deployer.estimateDeployFee(characterArtifact, characterArgs);
+  const parsedCharacterFee = ethers.utils.formatEther(characterDeploymentFee.toString());
+  console.log(`The deployment is estimated to cost ${parsedCharacterFee} ETH`);
+
+  const character = <Character>await deployer.deploy(characterArtifact, characterArgs);
+  await character.deployed();
+  console.log(`Character smart contract deployed to ${character.address}.`);
 
   await delay(20000);
   console.log('Will verify now');
@@ -41,5 +52,11 @@ export default async function (hre: HardhatRuntimeEnvironment) {
     address: film.address,
     constructorArguments: filmArgs,
     contract: 'contracts/Film.sol:Film',
+  });
+
+  await run(`verify:verify`, {
+    address: character.address,
+    constructorArguments: characterArgs,
+    contract: 'contracts/Character.sol:Character',
   });
 }
