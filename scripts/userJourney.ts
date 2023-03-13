@@ -96,8 +96,8 @@ async function main() {
   await film.acceptChild(1, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 3);
   await film.acceptChild(1, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 2);
   await film.connect(user).acceptChild(2, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 4);
-  await film.connect(user).acceptChild(2, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 5);
   await film.connect(user).acceptChild(2, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 6);
+  await film.connect(user).acceptChild(2, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 5);
 
   console.log(`Active child tokens of Film NFT 1: ${(await film.childrenOf(1)).length}`);
   console.log(`Pending child tokens of Film NFT 1: ${(await film.pendingChildrenOf(1)).length}`);
