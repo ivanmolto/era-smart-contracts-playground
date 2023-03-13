@@ -387,6 +387,27 @@ zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x8b23aA87
 
 </details>
 
+---
+
+### Cat (nested NFT)
+
+<details>
+    <summary>Click to see full details of the Contract address: 0x7bD7226030630aBAB59D643E04684E4C1d43cfBa</summary>
+
+Name: Cat (nested NFT)
+
+Symbol: CAT
+
+Contract address: 0x7bD7226030630aBAB59D643E04684E4C1d43cfBa
+
+Verification code: 4551
+
+zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x7bD7226030630aBAB59D643E04684E4C1d43cfBa)
+
+</details>
+
+---
+
 ## User Journey
 
 Please find inside the folder `scripts` the user journey script file `userJourney.ts`.
