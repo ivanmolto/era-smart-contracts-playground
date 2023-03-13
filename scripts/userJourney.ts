@@ -65,103 +65,94 @@ async function main() {
   console.log(`Pending assets of Film NFT 2: ${(await film.getPendingAssets(2)).length}`);
 
   // Visitor accepting assets for her/his film NFT #2
-  console.log('Accepting assets for Album NFT 2');
+  console.log('Accepting assets for Film NFT 2');
 
   await film.connect(user).acceptAsset(2, 0, 1);
   await film.connect(user).acceptAsset(2, 0, 2);
   await film.connect(user).acceptAsset(2, 0, 3);
 
-  console.log(`Active assets of Album NFT 2: ${(await film.getActiveAssets(2)).length}`);
-  console.log(`Pending assets of Album NFT 2: ${(await film.getPendingAssets(2)).length}`);
+  console.log(`Active assets of Film NFT 2: ${(await film.getActiveAssets(2)).length}`);
+  console.log(`Pending assets of Film NFT 2: ${(await film.getPendingAssets(2)).length}`);
 
-  console.log('Minting Characters NFTs into Album NFTs');
+  console.log('Minting Characters NFTs into Film NFTs');
 
   await character.nestMint(film.address, 1, 3);
   await character.nestMint(film.address, 2, 3);
-  await character.nestMint(film.address, 3, 3);
 
-  console.log(`Active child tokens of Album NFT 1: ${(await album.childrenOf(1)).length}`);
-  console.log(`Pending child tokens of Album NFT 1: ${(await album.pendingChildrenOf(1)).length}`);
-  console.log(`Active child tokens of Album NFT 2: ${(await album.childrenOf(2)).length}`);
-  console.log(`Pending child tokens of Album NFT 2: ${(await album.pendingChildrenOf(2)).length}`);
-  console.log(`Active child tokens of Album NFT 3: ${(await album.childrenOf(3)).length}`);
-  console.log(`Pending child tokens of Album NFT 3: ${(await album.pendingChildrenOf(3)).length}`);
+  console.log(`Active child tokens of Film NFT 1: ${(await film.childrenOf(1)).length}`);
+  console.log(`Pending child tokens of Film NFT 1: ${(await film.pendingChildrenOf(1)).length}`);
+  console.log(`Active child tokens of Film NFT 2: ${(await film.childrenOf(2)).length}`);
+  console.log(`Pending child tokens of Film NFT 2: ${(await film.pendingChildrenOf(2)).length}`);
 
-  console.log('Accepting child tokens for Album NFTs');
+  console.log('Accepting child tokens for Film NFTs');
 
-  await album.acceptChild(1, 0, song.address, 1); // (tokenId, index, childContract, childTokenId)
-  await album.acceptChild(1, 0, song.address, 3);
-  await album.acceptChild(1, 0, song.address, 2);
-  await album.acceptChild(2, 0, song.address, 4);
-  await album.acceptChild(2, 0, song.address, 6);
-  await album.acceptChild(2, 0, song.address, 5);
-  await album.connect(user).acceptChild(3, 0, song.address, 7);
-  await album.connect(user).acceptChild(3, 0, song.address, 9);
-  await album.connect(user).acceptChild(3, 0, song.address, 8);
+  await film.acceptChild(1, 0, character.address, 1); // (tokenId, index, childContract, childTokenId)
+  await film.acceptChild(1, 0, character.address, 3);
+  await film.acceptChild(1, 0, character.address, 2);
+  await film.connect(user).acceptChild(2, 0, character.address, 4);
+  await film.connect(user).acceptChild(2, 0, character.address, 5);
+  await film.connect(user).acceptChild(2, 0, character.address, 6);
 
-  console.log(`Active child tokens of Album NFT 1: ${(await album.childrenOf(1)).length}`);
-  console.log(`Pending child tokens of Album NFT 1: ${(await album.pendingChildrenOf(1)).length}`);
-  console.log(`Active child tokens of Album NFT 2: ${(await album.childrenOf(2)).length}`);
-  console.log(`Pending child tokens of Album NFT 2: ${(await album.pendingChildrenOf(2)).length}`);
-  console.log(`Active child tokens of Album NFT 3: ${(await album.childrenOf(3)).length}`);
-  console.log(`Pending child tokens of Album NFT 3: ${(await album.pendingChildrenOf(3)).length}`);
+  console.log(`Active child tokens of Film NFT 1: ${(await film.childrenOf(1)).length}`);
+  console.log(`Pending child tokens of Film NFT 1: ${(await film.pendingChildrenOf(1)).length}`);
+  console.log(`Active child tokens of Film NFT 2: ${(await film.childrenOf(2)).length}`);
+  console.log(`Pending child tokens of Film NFT 2: ${(await film.pendingChildrenOf(2)).length}`);
 
-  console.log('Adding asset entries to the Song smart contract');
+  console.log('Adding asset entries to the Character smart contract');
 
-  await song.addAssetEntry('ipfs://audio1');
-  await song.addAssetEntry('ipfs://metadata1');
-  await song.addAssetEntry('ipfs://lyrics1');
-  await song.addAssetEntry('ipfs://audio2');
-  await song.addAssetEntry('ipfs://metadata2');
-  await song.addAssetEntry('ipfs://lyrics2');
-  await song.addAssetEntry('ipfs://audio3');
-  await song.addAssetEntry('ipfs://metadata3');
-  await song.addAssetEntry('ipfs://lyrics3');
+  await character.addAssetEntry('ipfs://image1');
+  await character.addAssetEntry('ipfs://metadata1');
+  await character.addAssetEntry('ipfs://image11');
+  await character.addAssetEntry('ipfs://image2');
+  await character.addAssetEntry('ipfs://metadata2');
+  await character.addAssetEntry('ipfs://image21');
+  await character.addAssetEntry('ipfs://image3');
+  await character.addAssetEntry('ipfs://metadata3');
+  await character.addAssetEntry('ipfs://image31');
 
-  console.log('Adding assets to the Song NFTs');
+  console.log('Adding assets to the Character NFTs');
 
-  await song.addAssetToTokens([1, 4, 7], [1, 2, 3]);
-  await song.addAssetToTokens([2, 5, 8], [4, 5, 6]);
-  await song.addAssetToTokens([3, 6, 9], [7, 8, 9]);
+  await character.addAssetToTokens([1, 4], [1, 2, 3]);
+  await character.addAssetToTokens([2, 5], [4, 5, 6]);
+  await character.addAssetToTokens([3, 6], [7, 8, 9]);
 
-  console.log(`Active assets of Song NFT 1: ${(await song.getActiveAssets(1)).length}`);
-  console.log(`Pending assets of Song NFT 1: ${(await song.getPendingAssets(1)).length}`);
-  console.log(`Active assets of Song NFT 4: ${(await song.getActiveAssets(4)).length}`);
-  console.log(`Pending assets of Song NFT 4: ${(await song.getPendingAssets(4)).length}`);
-  console.log(`Active assets of Song NFT 7: ${(await song.getActiveAssets(7)).length}`);
-  console.log(`Pending assets of Song NFT 7: ${(await song.getPendingAssets(7)).length}`);
+  console.log(`Active assets of Character NFT 1: ${(await character.getActiveAssets(1)).length}`);
+  console.log(`Pending assets of Character NFT 1: ${(await character.getPendingAssets(1)).length}`);
+  console.log(`Active assets of Character NFT 4: ${(await character.getActiveAssets(4)).length}`);
+  console.log(`Pending assets of Character NFT 4: ${(await character.getPendingAssets(4)).length}`);
+  console.log(`Active assets of Character NFT 7: ${(await character.getActiveAssets(7)).length}`);
+  console.log(`Pending assets of Character NFT 7: ${(await character.getPendingAssets(7)).length}`);
 
-  console.log('Accepting assets for the Song NFTs not belonging to the owner');
+  console.log('Accepting assets for the Character NFTs not belonging to the owner');
 
-  await song.connect(user).acceptAsset(7, 0, 1);
-  await song.connect(user).acceptAsset(7, 0, 3);
-  await song.connect(user).acceptAsset(7, 0, 2);
-  await song.connect(user).acceptAsset(8, 0, 4);
-  await song.connect(user).acceptAsset(8, 0, 6);
-  await song.connect(user).acceptAsset(8, 0, 5);
-  await song.connect(user).acceptAsset(9, 0, 7);
-  await song.connect(user).acceptAsset(9, 0, 9);
-  await song.connect(user).acceptAsset(9, 0, 8);
+  await character.connect(user).acceptAsset(4, 0, 1);
+  await character.connect(user).acceptAsset(4, 0, 3);
+  await character.connect(user).acceptAsset(4, 0, 2);
+  await character.connect(user).acceptAsset(5, 0, 4);
+  await character.connect(user).acceptAsset(5, 0, 6);
+  await character.connect(user).acceptAsset(5, 0, 5);
+  await character.connect(user).acceptAsset(6, 0, 7);
+  await character.connect(user).acceptAsset(6, 0, 9);
+  await character.connect(user).acceptAsset(6, 0, 8);
 
-  console.log(`Active assets of Song NFT 1: ${(await song.getActiveAssets(1)).length}`);
-  console.log(`Pending assets of Song NFT 1: ${(await song.getPendingAssets(1)).length}`);
-  console.log(`Active assets of Song NFT 4: ${(await song.getActiveAssets(4)).length}`);
-  console.log(`Pending assets of Song NFT 4: ${(await song.getPendingAssets(4)).length}`);
-  console.log(`Active assets of Song NFT 7: ${(await song.getActiveAssets(7)).length}`);
-  console.log(`Pending assets of Song NFT 7: ${(await song.getPendingAssets(7)).length}`);
+  console.log(`Active assets of Character NFT 1: ${(await character.getActiveAssets(1)).length}`);
+  console.log(`Pending assets of Character NFT 1: ${(await character.getPendingAssets(1)).length}`);
+  console.log(`Active assets of Character NFT 4: ${(await character.getActiveAssets(4)).length}`);
+  console.log(`Pending assets of Character NFT 4: ${(await character.getPendingAssets(4)).length}`);
+  console.log(`Active assets of Character NFT 7: ${(await character.getActiveAssets(7)).length}`);
+  console.log(`Pending assets of Character NFT 7: ${(await character.getPendingAssets(7)).length}`);
 
   console.log('Observing the child-parent relationship');
 
-  console.log(`Children of Album NFT 1: ${await album.childrenOf(1)}`);
-  console.log(`Children of Album NFT 2: ${await album.childrenOf(2)}`);
-  console.log(`Children of Album NFT 3: ${await album.childrenOf(3)}`);
-  console.log(`Parent of Album NFT 1: ${await album.directOwnerOf(1)}`);
-  console.log(`Parent of Song NFT 1: ${await song.directOwnerOf(1)}`);
-  console.log(`Parent of Song NFT 4: ${await song.directOwnerOf(4)}`);
-  console.log(`Parent of Song NFT 7: ${await song.directOwnerOf(7)}`);
-  console.log(`Owner of Song NFT 1: ${await song.ownerOf(1)}`);
-  console.log(`Owner of Song NFT 4: ${await song.ownerOf(4)}`);
-  console.log(`Owner of Song NFT 7: ${await song.ownerOf(7)}`);
+  console.log(`Children of Film NFT 1: ${await film.childrenOf(1)}`);
+  console.log(`Children of Film NFT 2: ${await film.childrenOf(2)}`);
+  console.log(`Parent of Film NFT 1: ${await film.directOwnerOf(1)}`);
+  console.log(`Parent of Character NFT 1: ${await character.directOwnerOf(1)}`);
+  console.log(`Parent of Character NFT 4: ${await character.directOwnerOf(4)}`);
+  console.log(`Parent of Character NFT 7: ${await character.directOwnerOf(7)}`);
+  console.log(`Owner of Character NFT 1: ${await character.ownerOf(1)}`);
+  console.log(`Owner of Character NFT 4: ${await character.ownerOf(4)}`);
+  console.log(`Owner of Character NFT 7: ${await character.ownerOf(7)}`);
 }
 
 main()
