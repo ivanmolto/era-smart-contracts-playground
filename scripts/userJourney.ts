@@ -126,8 +126,6 @@ async function main() {
   console.log(`Pending assets of Character NFT 1: ${(await character.getPendingAssets(1)).length}`);
   console.log(`Active assets of Character NFT 4: ${(await character.getActiveAssets(4)).length}`);
   console.log(`Pending assets of Character NFT 4: ${(await character.getPendingAssets(4)).length}`);
-  console.log(`Active assets of Character NFT 7: ${(await character.getActiveAssets(7)).length}`);
-  console.log(`Pending assets of Character NFT 7: ${(await character.getPendingAssets(7)).length}`);
 
   console.log('Accepting assets for the Character NFTs not belonging to the owner');
 
@@ -145,8 +143,6 @@ async function main() {
   console.log(`Pending assets of Character NFT 1: ${(await character.getPendingAssets(1)).length}`);
   console.log(`Active assets of Character NFT 4: ${(await character.getActiveAssets(4)).length}`);
   console.log(`Pending assets of Character NFT 4: ${(await character.getPendingAssets(4)).length}`);
-  console.log(`Active assets of Character NFT 7: ${(await character.getActiveAssets(7)).length}`);
-  console.log(`Pending assets of Character NFT 7: ${(await character.getPendingAssets(7)).length}`);
 
   console.log('Observing the child-parent relationship');
 
@@ -155,10 +151,8 @@ async function main() {
   console.log(`Parent of Film NFT 1: ${await film.directOwnerOf(1)}`);
   console.log(`Parent of Character NFT 1: ${await character.directOwnerOf(1)}`);
   console.log(`Parent of Character NFT 4: ${await character.directOwnerOf(4)}`);
-  console.log(`Parent of Character NFT 7: ${await character.directOwnerOf(7)}`);
   console.log(`Owner of Character NFT 1: ${await character.ownerOf(1)}`);
   console.log(`Owner of Character NFT 4: ${await character.ownerOf(4)}`);
-  console.log(`Owner of Character NFT 7: ${await character.ownerOf(7)}`);
 }
 
 main()
