@@ -10,6 +10,7 @@ async function main() {
 
   // GLAM institution staff deploys smart contracts
   // GLAM is acronym for galleries, libraries, archives and museums
+  // Use case Pet Projects film and Cat, Dog and Pitch artwork nested NFTs
 
   console.log('Deploying the smart contracts');
 
@@ -38,6 +39,11 @@ async function main() {
   // Visitors can be whitelisted by sharing their public wallet address
   // while acquiring their ticket for an exhibition or by dropping their ENS in a
   // Twitter thread at https://twitter.com/bookm_art
+
+  // film.address = '0x707763458D169673db7Ac5a2a289c1189EdE0413'
+  // character.address = '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa'
+  // GLAM admin address = '0x531dFB9BAD428988F3A6f0831934379b9c95A1aa'
+  // visitor address = '0x8f75415816F8eFEC42a2B46944Da4A261b58b747'
 
   await film.mint(owner.address, 1);
   await film.mint(user.address, 1);
@@ -76,8 +82,8 @@ async function main() {
 
   console.log('Minting Characters NFTs into Film NFTs');
 
-  await character.nestMint(film.address, 1, 3);
-  await character.nestMint(film.address, 2, 3);
+  await character.nestMint('0x707763458D169673db7Ac5a2a289c1189EdE0413', 1, 3);
+  await character.nestMint('0x707763458D169673db7Ac5a2a289c1189EdE0413', 2, 3);
 
   console.log(`Active child tokens of Film NFT 1: ${(await film.childrenOf(1)).length}`);
   console.log(`Pending child tokens of Film NFT 1: ${(await film.pendingChildrenOf(1)).length}`);
@@ -86,12 +92,12 @@ async function main() {
 
   console.log('Accepting child tokens for Film NFTs');
 
-  await film.acceptChild(1, 0, character.address, 1); // (tokenId, index, childContract, childTokenId)
-  await film.acceptChild(1, 0, character.address, 3);
-  await film.acceptChild(1, 0, character.address, 2);
-  await film.connect(user).acceptChild(2, 0, character.address, 4);
-  await film.connect(user).acceptChild(2, 0, character.address, 5);
-  await film.connect(user).acceptChild(2, 0, character.address, 6);
+  await film.acceptChild(1, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 1); // (tokenId, index, childContract, childTokenId)
+  await film.acceptChild(1, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 3);
+  await film.acceptChild(1, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 2);
+  await film.connect(user).acceptChild(2, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 4);
+  await film.connect(user).acceptChild(2, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 5);
+  await film.connect(user).acceptChild(2, 0, '0x7bD7226030630aBAB59D643E04684E4C1d43cfBa', 6);
 
   console.log(`Active child tokens of Film NFT 1: ${(await film.childrenOf(1)).length}`);
   console.log(`Pending child tokens of Film NFT 1: ${(await film.pendingChildrenOf(1)).length}`);
@@ -100,15 +106,15 @@ async function main() {
 
   console.log('Adding asset entries to the Character smart contract');
 
-  await character.addAssetEntry('ipfs://image1');
-  await character.addAssetEntry('ipfs://metadata1');
-  await character.addAssetEntry('ipfs://image11');
-  await character.addAssetEntry('ipfs://image2');
-  await character.addAssetEntry('ipfs://metadata2');
-  await character.addAssetEntry('ipfs://image21');
-  await character.addAssetEntry('ipfs://image3');
-  await character.addAssetEntry('ipfs://metadata3');
-  await character.addAssetEntry('ipfs://image31');
+  await character.addAssetEntry('ipfs://QmW8xbC6aUTHWgSxYykq7jizhzYCbxfsyodkeBa4BqY6Si');
+  await character.addAssetEntry('ipfs://QmQWoLb2WfYsWUcXfyQcodVEoVbaByWH4WmB5K8CdREVbh');
+  await character.addAssetEntry('ipfs://QmYf2UKKn7E7CzDUD5xQsxurrNkCTYJLo3cpdz8HF9zTBn');
+  await character.addAssetEntry('ipfs://QmW8xbC6aUTHWgSxYykq7jizhzYCbxfsyodkeBa4BqY6Si');
+  await character.addAssetEntry('ipfs://QmQWoLb2WfYsWUcXfyQcodVEoVbaByWH4WmB5K8CdREVbh');
+  await character.addAssetEntry('ipfs://QmUU87bZbyxwdc7v2t6m7aTexBvqqhiUoeDYWqV2sqzeUL');
+  await character.addAssetEntry('ipfs://QmW8xbC6aUTHWgSxYykq7jizhzYCbxfsyodkeBa4BqY6Si');
+  await character.addAssetEntry('ipfs://QmQWoLb2WfYsWUcXfyQcodVEoVbaByWH4WmB5K8CdREVbh');
+  await character.addAssetEntry('ipfs://QmRXmdHzZZGP5t3LXAEavfNEtRyzJutv4JZ7JC2MmWMKEJ');
 
   console.log('Adding assets to the Character NFTs');
 
