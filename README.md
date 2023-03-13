@@ -389,6 +389,10 @@ zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x8b23aA87
 
 ## User Journey
 
+Please find inside the folder `scripts` the user journey script file `userJourney.ts`.
+
+Visitors of a GLAM institution (galleries, libraries, archives and museums) can be whitelisted to get an NFT by sharing their public wallet address while acquiring their ticket for an exhibition or by dropping their ENS in a Twitter thread at https://twitter.com/bookm_art. Once the GLAM staff have minted an NFT to their address and start to add assets to their tokens the visitors can start accepting assets in the collection details page of https://www.bookm.art.
+
 ## License
 
 The code is licensed under Apache 2.0 License. Credit to RMRK.app in Notice file.
