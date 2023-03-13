@@ -388,3 +388,8 @@ zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x8b23aA87
 </details>
 
 ## User Journey
+
+## License
+
+The code is licensed under Apache 2.0 License. Credit to RMRK.app in Notice file.
+Assets from Blender Studio are licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0/) (license is also embedded in the metadata of each asset).
