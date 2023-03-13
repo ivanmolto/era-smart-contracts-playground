@@ -291,6 +291,9 @@ teaserURI: ipfs://QmUoGSdHj8aZmWPHfpUqC8yRMuktTCfAxzWiN9hsHroG66
 
 ### Sprite Fright
 
+<details>
+    <summary>Click to see full details of the Contract address: 0x8380707688b09F16606ac606E9C3E14cA5B9B5A4</summary>
+
 Name: Sprite Fright
 
 Symbol: SPRITE
@@ -309,9 +312,14 @@ tokenURI: ipfs://QmcRTF6zg66N5pceWhfib5hoEhXq6DYTAfdyMnGBtdo8Ct
 
 lineupURI: ipfs://QmepXTjE1SUtWnFQxhPEb5nwrkcjXqSMCUs4o28yf4DB8V
 
+</details>
+
 ---
 
 ### Spring
+
+<details>
+    <summary>Click to see full details of the Contract address: 0x73713d7aa41B8E8bA3fd2834D14D5e0eAFA31242</summary>
 
 Name: Spring
 
@@ -331,9 +339,14 @@ tokenURI: ipfs://QmRdwxGqdSjKE4zHFy3upXpqZxCnSqogUfzMAjDzeQxGCi
 
 videoURI: ipfs://QmUPAsc2p3tgbt3ScnnB9MJ799zcCnbBYwsarYvQKxNruM
 
+</details>
+
 ---
 
 ### Caminandes Llamigos
+
+<details>
+    <summary>Click to see full details of the Contract address: 0xba832BfC947C2fD418359b9d42Be74C6AFcD1848</summary>
 
 Name: Caminandes Llamigos
 
@@ -349,9 +362,14 @@ zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0xba832BfC
 
 (In progress)
 
+</details>
+
 ---
 
 ### Coffee Run
+
+<details>
+    <summary>Click to see full details of the Contract address: 0x8b23aA87448b848462d1Ed290a30515Fd106c812</summary>
 
 Name: Coffee Run
 
@@ -367,6 +385,6 @@ zkSync Era Explorer: [link](https://goerli.explorer.zksync.io/address/0x8b23aA87
 
 (In progress)
 
----
+</details>
 
 ## User Journey
